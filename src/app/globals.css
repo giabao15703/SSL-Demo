@@ -37,11 +37,10 @@
 }
 
 .icon-button {
-    padding: 0.75rem;
+    padding: 1rem;
     width: 50px;
     border-radius: 100%;
     transition: all 0.3s ease-in-out;
-    background-color: black;
 }
 
 .icon-button:hover {
