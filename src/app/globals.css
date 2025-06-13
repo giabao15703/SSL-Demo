@@ -1,5 +1,98 @@
 @import 'tailwindcss';
 
+@keyframes pulseBorder {
+    0% {
+        border-color: rgba(255, 0, 255, 0.5);
+        box-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+
+    50% {
+        border-color: rgba(0, 255, 255, 1);
+        box-shadow: 0 0 20px rgba(255, 0, 255, 1), 0 0 40px rgba(0, 255, 255, 0.7);
+    }
+
+    100% {
+        border-color: rgba(255, 0, 255, 0.5);
+        box-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+}
+
+.rounded-container {
+    position: fixed;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(22, 20, 20, 0.9);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 30px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    animation: pulseBorder 2s infinite;
+    z-index: 50;
+    width: 24%;
+    max-width: 600px;
+}
+
+.icon-button {
+    padding: 0.75rem;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+.icon-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.play-button {
+    padding: 0.5rem;
+    margin-right: 10px;
+    background-color: rgb(47, 43, 43);
+    color: #333;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    transition: all 0.2s ease-in-out;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+}
+
+.voice-name {
+    font-size: 1.2rem;
+    font-weight: medium;
+    color: rgb(199, 171, 171);
+    text-align: center;
+    flex-grow: 1;
+    word-wrap: break-word;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: red;
+        border-image: linear-gradient(0deg, red, blue) 1;
+    }
+
+    50% {
+        border-color: blue;
+        border-image: linear-gradient(90deg, blue, red) 1;
+    }
+
+    100% {
+        border-color: red;
+        border-image: linear-gradient(180deg, red, blue) 1;
+    }
+}
+
+.animate-gradient-x {
+    background-size: 400% 400%;
+    animation: gradient-x 3s linear infinite;
+}
+
 body {
     background: linear-gradient(to bottom,
             #1a1a1a 0,
@@ -245,4 +338,3 @@ section {
 .animate-spin-slow {
     animation: spin-slow 30s linear infinite;
 }
-
