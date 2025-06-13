@@ -122,6 +122,7 @@ export default function Home() {
       });
 
       container.addEventListener("mouseleave", () => {
+        // Khi chuột rời khỏi, reset hiệu ứng
         gsap.to(container, {
           scale: 1,
           rotation: 0,
